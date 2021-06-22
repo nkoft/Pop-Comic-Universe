@@ -5,20 +5,17 @@ Comic book appreciation app where users can come to review, add and browse vario
 <br>
 
 ## MVP
-
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+The landing page connects to the home page or sign up. Users can see the comic book data and have partial access to details page. Only registered and authenticated users will be able to have full CRUD capablities(add,edit,delete comic book data).
 
 <br>
 
 ### Goals
 
-- 
-- 
-- 
-- 
-- 
+- Back End built out with API connection to Front End through Ruby on Rails
+- Front End built with React
+- Full Crud 
+- Authentication with hashes
+- Database custom built on back end
 
 <br>
 
@@ -28,11 +25,13 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React        | _Front End Framework_ |
+|   React Router    | _Navigation Components_ |
+|      JSON         | _Front end dependancies(axios)_ |
+|      Ruby         | _Lorem ipsum dolor sit amet, consectetur._ |
+|   Ruby on Rails   | _Back End Framework_ |
+|     GemFile       | _Store Ruby dependancies(cors, bcrypt, etc)_ |
+|       CORS        | _Cross-Origin Resource Sharing_            |
 
 <br>
 
