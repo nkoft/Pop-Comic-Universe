@@ -16,6 +16,7 @@ The landing page connects to the home page or sign up. Users can see the comic b
 - Full Crud 
 - Authentication with hashes
 - Database custom built on back end
+- CSS
 
 <br>
 
@@ -50,19 +51,21 @@ https://whimsical.com/comic-book-app-diagram-2Gpp4mJMQXHv44ynX4uGWK
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+|__ layouts/
+      |__ Layout.jsx
 |__ components/
-      |__ Header.jsx
-|__ services/
+      |__ Brands.jsx
+      |__ Comic.jsx
+      |__ ComicCard.jsx
+      |__ ComicCards.jsx
+      |__ Search.jsx
+      |__ Sort.jsx
+      |__ Nav.jsx
+      |__ Footer.jsx
 
 ```
 
