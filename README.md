@@ -75,8 +75,16 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+|  Create Ruby File   |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
+|  Build Schema and Models  |    H     |     3 hrs      |     1 hrs     |     TBD     |
+|  Create and Seed Data   |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
+|  Create Routes  |    H     |     3 hrs      |     1 hrs     |     TBD     |
+|  Build out Controllers   |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
+|  Add User Authentication   |    H     |     3 hrs      |     1 hrs     |     TBD     |
+|  Add Json dependancies and build react within client folder  |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
+|  Create necessary components and define routes   |    H     |     3 hrs      |     1 hrs     |     TBD     |
+|  Render to Screens  |    H     |     3 hrs      |     2 hrs     |    3 hrs    |
+|  Style with CSS   |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 
