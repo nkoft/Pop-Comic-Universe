@@ -1,5 +1,5 @@
 class ComicsController < ApplicationController
-  before_action :set_comic, only: [:show, :update, :destroy]
+  before_action :set_comic, only: [:show, :update, :destroy, :add_review]
   before_action :authorize_request, except: [:index, :show]
 
   # GET /comics
@@ -38,6 +38,14 @@ class ComicsController < ApplicationController
   # DELETE /comics/1
   def destroy
     @comic.destroy
+  end
+
+  def add_review
+    @review = Review.find(params[:review_id])
+
+    @comic.reviews << @review
+    render json: @comic, include: :reviews
+    
   end
 
   private

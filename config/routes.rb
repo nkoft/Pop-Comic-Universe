@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
+  put '/reviews/:review_id/comics/:id', to 'comics#add_review'
   
   resources :comics do 
     resources :reviews, shallow: true
