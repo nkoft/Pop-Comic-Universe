@@ -17,6 +17,7 @@ class ComicsController < ApplicationController
   # POST /comics
   def create
     @comic = Comic.new(comic_params)
+    @comic.user = @current_user
 
     if @comic.save
       render json: @comic, status: :created
@@ -47,6 +48,6 @@ class ComicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comic_params
-      params.require(:comic).permit(:title, :date, :writer, :artist, :synopsis, :image_url)
+      params.require(:comic).permit(:title, :date, :writer, :artist, :synopsis, :image_url, :brand)
     end
 end

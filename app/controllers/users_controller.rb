@@ -1,12 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize_request, except: :create
 
-  # GET /users
-  def index
-    @users = User.all
-
-    render json: @users
-  end
 
   # POST /users
   def create

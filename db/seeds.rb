@@ -92,6 +92,7 @@ comics = {
     artist: "Steve Ditko",
     synopsis: "In 1962, in the pages of a comic book slated for cancellation, Stan Lee and Steve Ditko gave birth to one of the most enduring icons in American popular culture - the one and only Amazing Spider-Man!",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/51vtj0CYiGL._SX325_BO1,204,203,200_.jpg",
+    brand: 'Marvel Comics'
   }
 }
 
