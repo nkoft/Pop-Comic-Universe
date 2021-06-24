@@ -6,6 +6,7 @@ class CreateComics < ActiveRecord::Migration[6.1]
       t.string :writer
       t.string :artist
       t.text :synopsis
+      t.string :image_url
 
       t.timestamps
     end

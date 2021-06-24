@@ -1,6 +1,7 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, except: [:index, :show]
+  
   # GET /comics
   def index
     @comics = Comic.all
@@ -18,7 +19,7 @@ class ComicsController < ApplicationController
     @comic = Comic.new(comic_params)
 
     if @comic.save
-      render json: @comic, status: :created, location: @comic
+      render json: @comic, status: :created
     else
       render json: @comic.errors, status: :unprocessable_entity
     end
@@ -46,6 +47,6 @@ class ComicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comic_params
-      params.require(:comic).permit(:title, :date, :writer, :artist, :synopsis)
+      params.require(:comic).permit(:title, :date, :writer, :artist, :synopsis, :image_url)
     end
 end
