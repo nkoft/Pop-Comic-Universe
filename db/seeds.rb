@@ -11,23 +11,6 @@
 
 puts "#{User.count} users created"
 
-brands = {
-  marvel: {
-    name: 'Marvel',
-  },
-  dc: {
-    name: 'DC',
-  },
-  darkhorse: {
-    name: 'Dark Horse Comics',
-  },
-  image: {
-    name: 'Image Comics'
-  }
-}
-
-Brand.create(brands.values)
-puts "#{Brand.count} comic brands created"
 
 comics = {
   batman1: {
@@ -37,6 +20,7 @@ comics = {
     artist: "Greg Capullo",
     synopsis: "The story pits the Batman and his allies against the Court of Owls organization as they attempt to cement their control over Gotham City, which they have been manipulating in secret for centuries.",
     image_url: "https://images-na.ssl-images-amazon.com/images/S/cmx-images-prod/Item/48553/48553._SX360_QL80_TTD_.jpg",
+    brand: 'DC Comics',
   },
   batman2: {
     title: "Batman Vol. 3: Death of the Family (New 52)",
@@ -45,6 +29,7 @@ comics = {
     artist: "Greg Capullo",
     synopsis: "The story involves the return of Batman's archenemy, the Joker, and his plan to destroy all of the people Batman has come to rely on over the years",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/91grEvxbcoL.jpg",
+    brand: 'DC Comics'
   },
   superman: {
     title: "All Star Superman",
@@ -53,6 +38,7 @@ comics = {
     artist: "Frank Quitely",
     synopsis: "Synopsis : Superman ponders his future after a rescue mission to the sun overly exposes him to radiation.",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/81JDRABs0zL.jpg",
+    brand: 'DC Comics',
   },
   flash: {
     title: "The Flash Vol. 1: Lightning Strikes Twice (Rebirth)",
@@ -61,6 +47,7 @@ comics = {
     artist: "Carmine di Giandomenico",
     synopsis: "As Barry Allen, a.k.a. the Flash, learns more about the source that fuels his incredible powers, this same Speed Force that flows through him is unleashed all over Central City!",
     image_url: "https://static.wikia.nocookie.net/marvel_dc/images/1/17/The_Flash_Lightning_Strikes_Twice.jpg/revision/latest?cb=20200512183708",
+    brand: 'DC Comics',
   },
   avengers: {
     title: "The Infinity Gauntlet",
@@ -69,6 +56,7 @@ comics = {
     artist: "George Perez, Ron Lim",
     synopsis: "The heroes of Marvel up against the omnipotent Eternal, Thanos! The Mad Titan has become the most powerful being in the universe, and enslavement or destruction may be the only choices he gives it! The successive Starlin sagas that shook space and time start here!",
     image_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522431778l/39685558._SY475_.jpg",
+    brand: 'Marvel Comics'
   },
   walkingdead: {
     title: "The Walking Dead Vol. 1: Days Gone By",
@@ -77,6 +65,7 @@ comics = {
     artist: "Tony Moore",
     synopsis: "A couple months ago Rick Grimes was a small town cop who had never fired a shot and only ever saw one dead body. Separated from his family he must now sort through the death and confusion to try and find his wife and son.",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71HE5gazkLL.jpg",
+    brand: 'Image Comics'
   },
   watchmen: {
     title: "Watchmen",
@@ -85,6 +74,7 @@ comics = {
     artist: "Dave Gibbons",
     synopsis: "Watchmen depicts an alternate history in which superheroes emerged in the 1940s and 1960s and their presence changed history so that the United States won the Vietnam War and the Watergate scandal was never exposed.",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/41cbjfkz79L._SX322_BO1,204,203,200_.jpg",
+    brand: 'DC Comics'
   },
   hellboy: {
     title: "Hellboy in Mexico",
@@ -93,6 +83,7 @@ comics = {
     artist: "Richard Corben",
     synopsis: "In 1956, Hellboy caravans across Mexico--vampire-hunting with luchadores, finding the Aztec Gods, fighting evil turkeys and Frankenstein's monster, and drinking way too much tequila, in the strangest collection of his adventures yet.",
     image_url: "https://images-na.ssl-images-amazon.com/images/I/71FgGe34NzL.jpg",
+    brand: 'Dark Horse Comics'
   },
   spiderman: {
     title: "Amazing Spider-Man Epic Collection: Great Power",

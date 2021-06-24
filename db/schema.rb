@@ -10,16 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_162155) do
+ActiveRecord::Schema.define(version: 2021_06_24_205712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "brands", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "comics", force: :cascade do |t|
     t.string "title"
@@ -30,6 +24,19 @@ ActiveRecord::Schema.define(version: 2021_06_23_162155) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "brand"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_comics_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "post"
+    t.bigint "user_id", null: false
+    t.bigint "comic_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["comic_id"], name: "index_reviews_on_comic_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,4 +47,6 @@ ActiveRecord::Schema.define(version: 2021_06_23_162155) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "reviews", "comics"
+  add_foreign_key "reviews", "users"
 end

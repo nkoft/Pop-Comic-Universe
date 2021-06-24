@@ -1,7 +1,7 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :update, :destroy]
   before_action :authorize_request, except: [:index, :show]
-  
+
   # GET /comics
   def index
     @comics = Comic.all
@@ -11,7 +11,7 @@ class ComicsController < ApplicationController
 
   # GET /comics/1
   def show
-    render json: @comic
+    render json: @comic, include: :reviews 
   end
 
   # POST /comics
