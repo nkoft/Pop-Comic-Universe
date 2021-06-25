@@ -6,11 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Comic.destroy_all
+User.destroy_all
+Review.destroy_all
 
 @user = User.create!(username: 'Niko', email: 'niko@email.com', password: 'loons1')
 
 puts "#{User.count} users created"
 
+@review1 = Review.create!(post: "The Court of Owls starts off Scott Snyder's new 52 Batman series with startling BANG!")
+
+@review2 = Review.create!(post: "Never has the Joker ever gone to this depth of madness. One of the greatest batman reads of all time.")
+@review3 = Review.create!(post: "Very rarely do we get to enter the humanity of Superman from a vulnerable standpoint. Grant Morrison does not disappoint.")
+@review4 = Review.create!(post: "Very entertaining read from one of DC's favorites.")
+@review5 = Review.create!(post: "There's only so much you can portray on screen compared to the original story. This is one of the true holy grails of graphic novels.")
+@review6 = Review.create!(post: "Great to finally see where the tv phenomenon all started. Worth the buy.")
+@review7 = Review.create!(post: "Widely considered the greatest graphic novel ever written for a reason. And for that matter, it's ranked as one of the best ever written works of literature.")
+@review8 = Review.create!(post: "What's not to love with this? He's simply badass. And it's usually pretty rewarding when you can support a brand not named Marvel or DC.")
+@review9 = Review.create!(post: "Can't talk comics without mentioning spidey. This one's a pretty cool early title for the Jordan of comic writers, Stan Lee. Pick this one up.")
 
 comics = {
   batman1: {
@@ -105,5 +118,6 @@ comics = {
   }
 }
 
-Comic.create(comics.values)
+
+Comic.create!(comics.values)
 puts "#{Comic.count} comic books created"

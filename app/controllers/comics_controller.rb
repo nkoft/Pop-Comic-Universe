@@ -45,7 +45,6 @@ class ComicsController < ApplicationController
 
     @comic.reviews << @review
     render json: @comic, include: :reviews
-    
   end
 
   private
