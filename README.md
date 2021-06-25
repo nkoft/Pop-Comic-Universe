@@ -29,7 +29,7 @@ The landing page connects to the home page or sign up. Users can see the comic b
 |      React        | _Front End Framework_ |
 |   React Router    | _Navigation Components_ |
 |      JSON         | _Front end dependancies(axios)_ |
-|      Ruby         | _Lorem ipsum dolor sit amet, consectetur._ |
+|      Ruby         | _Language I'll be using to build this app_ |
 |   Ruby on Rails   | _Back End Framework_ |
 |     GemFile       | _Store Ruby dependancies(cors, bcrypt, etc)_ |
 |       CORS        | _Cross-Origin Resource Sharing_            |
@@ -55,17 +55,19 @@ https://whimsical.com/comic-book-app-diagram-2Gpp4mJMQXHv44ynX4uGWK
 ``` structure
 
 src
-|__ layouts/
-      |__ Layout.jsx
 |__ components/
-      |__ Brands.jsx
-      |__ Comic.jsx
-      |__ ComicCard.jsx
-      |__ ComicCards.jsx
-      |__ Search.jsx
-      |__ Sort.jsx
-      |__ Nav.jsx
-      |__ Footer.jsx
+      |__ Layout/
+          |__ Layout.jsx
+          |__ Layout.css
+      |__ Comic/
+          |__ Comic.jsx
+          |__ Comic.css
+      |__ ComicCard
+      |__ ComicCards
+      |__ Search
+      |__ Sort
+      |__ Nav
+      |__ Footer
 
 ```
 
