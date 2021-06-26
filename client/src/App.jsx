@@ -1,5 +1,5 @@
 import "./App.css";
-// import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout/Layout";
 import Home from "./screens/Home/Home";
 import { verifyUser } from "./services/auth";
 import { Route, Switch, Redirect } from "react-router-dom";
