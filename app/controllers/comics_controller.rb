@@ -40,6 +40,7 @@ class ComicsController < ApplicationController
     @comic.destroy
   end
 
+  # PUT /reviews/1/foods/1
   def add_review
     @review = Review.find(params[:review_id])
 
