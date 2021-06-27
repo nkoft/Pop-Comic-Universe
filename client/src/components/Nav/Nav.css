@@ -1,0 +1,14 @@
+nav {
+  background-color: black;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+nav .links {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+}

@@ -1,6 +1,6 @@
 import "./App.css";
-import Layout from "./components/Layout/Layout";
 import Home from "./screens/Home/Home";
+import Comics from "./screens/Comics/Comics";
 import { verifyUser } from "./services/auth";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -20,6 +20,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home user={user} />
+        </Route>
+        <Route path="/comics">
+          <Comics user={user} />
         </Route>
       </Switch>
     </div>

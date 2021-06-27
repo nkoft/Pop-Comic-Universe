@@ -1,8 +1,7 @@
+import React from "react";
 import "./Layout.css";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
-import React from "react";
-import Link from "react-router-dom";
 
 const Layout = (props) => {
   return (

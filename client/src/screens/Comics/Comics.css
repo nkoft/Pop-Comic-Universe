@@ -1,0 +1,7 @@
+.comic-list {
+  display: flex;
+}
+
+.comic-item img {
+  width: 120px;
+}
