@@ -28,7 +28,7 @@ function App() {
   const handleLogin = async (formData) => {
     const user = await loginUser(formData);
     setUser(user);
-    history.push("/");
+    history.push("/comics");
   };
 
   const handleRegister = async (formData) => {
