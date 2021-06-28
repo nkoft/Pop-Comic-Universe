@@ -8,6 +8,8 @@ const ComicCard = (props) => {
         <img className="comic-card-image" src={props.image_url} />
       </Link>
       <p className="comic-card-title">{props.title}</p>
+      <div className="comic-card-brand">{props.brand}</div>
+      <div className="comic-card-date">{props.date}</div>
     </div>
   );
 };
