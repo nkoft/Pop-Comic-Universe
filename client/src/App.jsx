@@ -5,6 +5,7 @@ import Home from "./screens/Home/Home";
 import Comics from "./screens/Comics/Comics";
 import SignIn from "./screens/SignIn/SignIn";
 import SignOut from "./screens/SignOut/SignOut";
+import ComicDetail from "./screens/ComicDetail/ComicDetail";
 import {
   loginUser,
   registerUser,
@@ -48,10 +49,13 @@ function App() {
         <Route exact path="/">
           <Home user={user} />
         </Route>
-        <Route path="/comics">
+        <Route exact path="/comics">
           <Comics user={user} />
         </Route>
-        <Route path="/sign-in">
+        <Route exact path="/comics/:id">
+          <ComicDetail user={user} />
+        </Route>
+        <Route exact path="/sign-in">
           <SignIn handleLogin={handleLogin} />
         </Route>
         {/* <Route path="/comics">
