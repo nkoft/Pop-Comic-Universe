@@ -42,6 +42,7 @@ function App() {
     setUser(null);
     localStorage.removeItem("authToken");
     removeToken();
+    history.push("/comics");
   };
 
   return (
