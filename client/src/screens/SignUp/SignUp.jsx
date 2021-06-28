@@ -24,11 +24,7 @@ const SignUp = (props) => {
 
   const onSignUp = async (event) => {
     event.preventDefault();
-    const { setUser } = props;
     try {
-      // const user = await registerUser(form);
-      // setUser(user);
-      // history.push("/comics");
       await props.handleRegister(form);
     } catch (error) {
       console.error(error);
