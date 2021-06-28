@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Home from "./screens/Home/Home";
 import Comics from "./screens/Comics/Comics";
 import SignIn from "./screens/SignIn/SignIn";
+import SignUp from "./screens/SignUp/SignUp";
 import SignOut from "./screens/SignOut/SignOut";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
 import {
@@ -34,7 +35,7 @@ function App() {
   const handleRegister = async (formData) => {
     const user = await registerUser(formData);
     setUser(user);
-    history.push("/");
+    history.push("/comics");
   };
 
   const handleLogout = () => {
@@ -58,9 +59,12 @@ function App() {
         <Route exact path="/sign-in">
           <SignIn handleLogin={handleLogin} />
         </Route>
-        {/* <Route path="/comics">
-          <SignOut handleLogout={handleLogout} />
-        </Route> */}
+        <Route exact path="/sign-up">
+          <SignUp handleRegister={handleRegister} />
+        </Route>
+        <Route exact path="/comics">
+          {/* <SignOut handleLogout={handleLogout} /> */}
+        </Route>
       </Switch>
     </div>
   );

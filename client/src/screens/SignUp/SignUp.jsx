@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SignUp.css";
 import { registerUser } from "../../services/auth";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 
 const SignUp = (props) => {
@@ -26,9 +26,10 @@ const SignUp = (props) => {
     event.preventDefault();
     const { setUser } = props;
     try {
-      const user = await registerUser(form);
-      setUser(user);
-      history.push("/comics");
+      // const user = await registerUser(form);
+      // setUser(user);
+      // history.push("/comics");
+      await props.handleRegister(form);
     } catch (error) {
       console.error(error);
       setForm({
