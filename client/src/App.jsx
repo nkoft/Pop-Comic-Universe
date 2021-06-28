@@ -38,12 +38,12 @@ function App() {
     history.push("/comics");
   };
 
-  const handleLogout = () => {
-    setUser(null);
-    localStorage.removeItem("authToken");
-    removeToken();
-    history.push("/comics");
-  };
+  // const handleLogout = () => {
+  //   setUser(null);
+  //   localStorage.removeItem("authToken");
+  //   removeToken();
+  //   history.push("/comics");
+  // };
 
   return (
     <div className="App">

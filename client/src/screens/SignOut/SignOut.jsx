@@ -8,8 +8,9 @@ const SignOut = (props) => {
 
   useEffect(() => {
     const signOutUser = () => {
-      removeToken();
       setUser(null);
+      localStorage.removeItem("authToken");
+      removeToken();
       history.push("/comics");
     };
     signOutUser();
