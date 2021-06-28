@@ -3,3 +3,10 @@
   margin: 20px;
   font-size: 10px;
 }
+.comic-card-image {
+  width: 100px;
+}
+
+.comic-card-artist {
+  margin: 0;
+}
