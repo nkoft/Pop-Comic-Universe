@@ -6,7 +6,6 @@
     "footer";
   grid-template-rows: 70px 1fr 30px;
   grid-template-columns: 1fr;
-  background-color: aqua;
   width: 100vw;
   height: 100vh;
 }

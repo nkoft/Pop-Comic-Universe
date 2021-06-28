@@ -8,6 +8,14 @@
   margin: 0 auto;
 }
 
+.comic-item {
+  margin: 25px;
+}
+
+.comic-item-title {
+  border: 15px;
+}
+
 .comic-item img {
   width: 120px;
 }

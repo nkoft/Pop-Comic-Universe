@@ -1,12 +1,8 @@
 .comic-card {
   width: 100px;
-  margin: 20px;
-  font-size: 10px;
+  margin: 40px;
+  font-size: 14px;
 }
 .comic-card-image {
   width: 100px;
-}
-
-.comic-card-title {
-  margin: 0;
 }
