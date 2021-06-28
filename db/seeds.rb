@@ -52,7 +52,7 @@ puts "#{User.count} users created"
     writer: "Joshua Williamson",
     artist: "Carmine di Giandomenico",
     synopsis: "As Barry Allen, a.k.a. the Flash, learns more about the source that fuels his incredible powers, this same Speed Force that flows through him is unleashed all over Central City!",
-    image_url: "https://static.wikia.nocookie.net/marvel_dc/images/1/17/The_Flash_Lightning_Strikes_Twice.jpg/revision/latest?cb=20200512183708",
+    image_url: "https://images-na.ssl-images-amazon.com/images/I/91vD0VRBadL.jpg",
     brand: 'DC Comics',
     user: @user
   )
