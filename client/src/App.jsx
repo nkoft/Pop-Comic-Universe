@@ -1,12 +1,20 @@
 import "./App.css";
+import { Route, Switch, useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Home from "./screens/Home/Home";
 import Comics from "./screens/Comics/Comics";
-import { verifyUser } from "./services/auth";
-import { Route, Switch, Redirect } from "react-router-dom";
-import { useEffect, useState } from "react";
+import SignIn from "./screens/SignIn/SignIn";
+import SignOut from "./screens/SignOut/SignOut";
+import {
+  loginUser,
+  registerUser,
+  verifyUser,
+  removeToken,
+} from "./services/auth";
 
 function App() {
   const [user, setUser] = useState(null);
+  const history = useHistory();
 
   useEffect(() => {
     const grabUser = async () => {
@@ -15,6 +23,25 @@ function App() {
     };
     grabUser();
   }, []);
+
+  const handleLogin = async (formData) => {
+    const user = await loginUser(formData);
+    setUser(user);
+    history.push("/");
+  };
+
+  const handleRegister = async (formData) => {
+    const user = await registerUser(formData);
+    setUser(user);
+    history.push("/");
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem("authToken");
+    removeToken();
+  };
+
   return (
     <div className="App">
       <Switch>
@@ -24,6 +51,12 @@ function App() {
         <Route path="/comics">
           <Comics user={user} />
         </Route>
+        <Route path="/sign-in">
+          <SignIn handleLogin={handleLogin} />
+        </Route>
+        {/* <Route path="/comics">
+          <SignOut handleLogout={handleLogout} />
+        </Route> */}
       </Switch>
     </div>
   );

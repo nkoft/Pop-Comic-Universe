@@ -1,36 +1,66 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
+import Comic from "../../components/Comic/Comic";
+import Search from "../../components/Search/Search";
+import Sort from "../../components/Sort/Sort";
+import { AZ, ZA } from "../../utils/sort";
 import { getAllComics } from "../../services/comics";
 import "./Comics.css";
 
-const ComicBook = (props) => {
-  const {
-    detail: { id, artist, brand, image_url, title },
-  } = props;
-  console.log(111, props.detail);
-  return (
-    <div className="comic-item">
-      <img src={image_url} alt={title} />
-    </div>
-  );
-};
-
-const Comics = (prop) => {
+const Comics = (props) => {
   const [comics, setComics] = useState([]);
+  const [applySort, setApplySort] = useState(false);
+  const [searchResult, setSearchResult] = useState([]);
+  const [sortType, setSortType] = useState("title-ascending");
 
-  useEffect(async () => {
-    const comics = await getAllComics();
-    setComics(comics);
+  useEffect(() => {
+    const fetchComics = async () => {
+      const allComics = await getAllComics();
+      console.log(allComics);
+      setComics(allComics);
+      setSearchResult(allComics);
+    };
+    fetchComics();
   }, []);
 
+  const handleSort = (type) => {
+    if (type !== "" && type !== undefined) {
+      setSortType(type);
+    }
+    switch (type) {
+      case "title-ascending":
+        setSearchResult(AZ(searchResult));
+        break;
+      case "title-descending":
+        setSearchResult(ZA(searchResult));
+        break;
+    }
+  };
+
+  if (applySort) {
+    handleSort(sortType);
+    setApplySort(false);
+  }
+
+  const handleSearch = (event) => {
+    const results = comics.filter((comic) =>
+      comic.title.toLowerCase().includes(event.target.value.toLowerCase())
+    );
+    console.log(results);
+    setSearchResult(results);
+    setApplySort(true);
+  };
+
+  const handleSubmit = (event) => event.preventDefault();
+
   return (
-    <Layout user={prop.user}>
-      <div className="comic-list">
-        {comics.length ? (
-          comics.map((c, index) => <ComicBook key={index} detail={c} />)
-        ) : (
-          <div>empty list</div>
-        )}
+    <Layout user={props.user}>
+      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
+      <div className="comic-card">
+        {searchResult.map((comicData, index) => {
+          return <Comic comicData={comicData} key={index} />;
+        })}
       </div>
     </Layout>
   );
