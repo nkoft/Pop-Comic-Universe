@@ -64,7 +64,7 @@ function App() {
           <SignUp handleRegister={handleRegister} />
         </Route>
         <Route exact path="/sign-out">
-          <SignOut handleLogout={handleLogout} />
+          <SignOut setUser={setUser} />
         </Route>
       </Switch>
     </div>
