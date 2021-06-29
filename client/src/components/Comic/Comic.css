@@ -9,6 +9,7 @@
   transition: 0.5s;
   box-shadow: 0 3px 3px -2px gray;
   border-top: 10px;
+  text-decoration: none;
 }
 
 /* .comic-card:hover {
@@ -20,4 +21,14 @@
   box-shadow: 0 3px 3px -2px gray;
   border: 1px ridge gray;
   border-bottom: none;
+}
+
+.comic-item-brand {
+  font-weight: bold;
+  color: black;
+}
+
+.comic-item-title {
+  font-weight: bolder;
+  color: black;
 }

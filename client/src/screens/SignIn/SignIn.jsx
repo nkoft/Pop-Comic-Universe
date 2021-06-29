@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 import "./SignIn.css";
 
 export default function SignIn(props) {
@@ -19,35 +20,42 @@ export default function SignIn(props) {
   };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleLogin(formData);
-      }}
-    >
-      <h3>Login</h3>
-      <label>
-        Username:
-        <input
-          type="text"
-          name="username"
-          value={username}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <Link to="/sign-up">Sign Up</Link>
-      <button>Submit</button>
-    </form>
+    <Layout>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin(formData);
+        }}
+      >
+        <div className="sign-in-container">
+          <h3>Login</h3>
+          <label>
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              value={username}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={handleChange}
+            />
+          </label>
+          <br />
+          <h4>
+            Not Signed Up Yet? <Link to="/sign-up">Sign Up</Link>
+          </h4>
+
+          <button>Submit</button>
+        </div>
+      </form>
+    </Layout>
   );
 }

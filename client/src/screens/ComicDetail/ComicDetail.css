@@ -1,3 +1,41 @@
 .comic-detail-image {
   width: 300px;
 }
+
+.detail {
+  margin: 10px;
+}
+
+.title {
+  font-weight: bold;
+  padding: 2px;
+}
+
+.brand {
+  padding: 1px;
+  font-style: italic;
+}
+
+.date {
+  padding: 1px;
+}
+
+.writer {
+  padding: 1px;
+}
+.artist {
+  padding: 1px;
+}
+
+.synopsis {
+  padding: 1px;
+  text-decoration: underline;
+}
+
+.edit-btn {
+  transition: none;
+}
+
+.reviews {
+  text-decoration: underline;
+}

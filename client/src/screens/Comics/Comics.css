@@ -8,8 +8,13 @@
   margin: 0 auto;
 }
 
+.comic-item text {
+  color: black;
+}
+
 .comic-item {
   margin: 25px;
+  font-size: 14px;
 }
 
 .comic-item-title {

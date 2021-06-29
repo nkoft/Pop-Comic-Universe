@@ -3,4 +3,13 @@ footer p {
   align-items: center;
   justify-content: center;
   height: 30px;
+  background-color: black;
+}
+
+footer a {
+  color: white;
+}
+
+footer {
+  background-color: black;
 }
