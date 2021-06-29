@@ -1,12 +1,15 @@
 nav {
   background-color: black;
   padding: 25px;
-  margin-bottom: 25px;
 }
 
 nav .links {
   display: flex;
   justify-content: space-between;
+}
+
+.nav-unauthenticated a {
+  margin: 0 8px;
 }
 
 nav a {

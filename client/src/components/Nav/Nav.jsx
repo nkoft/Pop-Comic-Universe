@@ -13,14 +13,14 @@ const authenticatedOptions = (
 );
 
 const unauthenticatedOptions = (
-  <>
+  <div className="nav-unauthenticated">
     <NavLink className="link" to="/sign-up">
       Sign Up
     </NavLink>
     <NavLink className="link" to="/sign-in">
       Sign In
     </NavLink>
-  </>
+  </div>
 );
 
 const alwaysOptions = (

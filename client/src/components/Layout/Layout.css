@@ -17,3 +17,7 @@
 .layout-footer {
   grid-area: footer;
 }
+
+.layout-children {
+  padding: 30px;
+}
