@@ -44,11 +44,11 @@ function App() {
         <Route exact path="/comics">
           <Comics user={user} />
         </Route>
+        <Route exact path="/add-comic">
+          <ComicCreate user={user} />
+        </Route>
         <Route exact path="/comics/:id">
           <ComicDetail user={user} />
-        </Route>
-        <Route exact path="/comics/create">
-          <ComicCreate user={user} />
         </Route>
         <Route exact path="/comics/:id/edit">
           <ComicEdit user={user} />
