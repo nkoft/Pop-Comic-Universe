@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import Reviews from "../../components/Reviews/Reviews";
 import { getOneComic } from "../../services/comics";
 import "./ComicDetail.css";
 
@@ -11,10 +12,11 @@ const ComicDetail = (props) => {
   useEffect(() => {
     const fetchComic = async () => {
       const result = await getOneComic(id);
+      console.log(result);
       setComic(result);
     };
     fetchComic();
-  }, []);
+  }, [id]);
 
   return (
     <Layout user={props.user}>
@@ -34,12 +36,14 @@ const ComicDetail = (props) => {
             <div className="writer">Writer : {comic.writer}</div>
             <div className="artist">Artist : {comic.artist}</div>
             <div className="synopsis">Synopsis : {comic.synopsis}</div>
-
-            <Link className="edit-button" to={`/comics/${comic.id}/edit`}>
-              <button className="edit-btn">Edit</button>
-            </Link>
           </div>
+          <Reviews reviews={comic.reviews} />
         </div>
+        {props.user && (
+          <Link className="edit-button" to={`/comics/${comic.id}/edit`}>
+            <button className="edit-btn">Edit</button>
+          </Link>
+        )}
       </div>
     </Layout>
   );
