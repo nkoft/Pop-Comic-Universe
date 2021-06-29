@@ -1,8 +1,7 @@
 import "./Review.css";
-import { useState, useEffect } from "react";
 
-const Review = () => {
-  return <div></div>;
+const Review = (props) => {
+  return <div>test Review</div>;
 };
 
 export default Review;
