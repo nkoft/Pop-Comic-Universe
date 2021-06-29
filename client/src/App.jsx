@@ -7,6 +7,7 @@ import SignIn from "./screens/SignIn/SignIn";
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from "./screens/SignOut/SignOut";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
+import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import {
   loginUser,
   registerUser,
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route exact path="/comics/:id">
           <ComicDetail user={user} />
+        </Route>
+        <Route exact path="/comics/:id/edit">
+          <ComicEdit user={user} />
         </Route>
         <Route exact path="/sign-in">
           <SignIn handleLogin={handleLogin} />

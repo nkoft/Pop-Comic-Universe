@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams, Redirect, Link } from "react-router-dom";
-import { putComic, deleteComic } from "../../services/comics";
-import Layout from "./../../components/Layout";
+import { putComic, deleteComic, getOneComic } from "../../services/comics";
+import Layout from "../../components/Layout/Layout";
 import "./ComicEdit.css";
 
-const ComicEdit = () => {
+const ComicEdit = (props) => {
   const [comic, setComic] = useState({
     image_url: "",
     title: "",
@@ -15,16 +15,33 @@ const ComicEdit = () => {
     synopsis: "",
   });
 
-  // const [isEdited, setEdited] = useState(false);
-  // let { id } = useParams();
+  const [isEdited, setEdited] = useState(false);
+  let { id } = useParams();
 
   useEffect(() => {
     const grabComic = async () => {
-      const comic = await getComic(id);
+      const comic = await getOneComic(id);
       setComic(comic);
     };
     grabComic();
   }, [id]);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setComic({
+      ...comic,
+      [name]: value,
+    });
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const updated = await putComic(id, comic);
+    setEdited(updated);
+  };
+
+  if (isEdited) {
+    return <Redirect to={`/comics/${id}`} />;
+  }
 
   return (
     <Layout user={props.user}>
