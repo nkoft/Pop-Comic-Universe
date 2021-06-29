@@ -1,0 +1,28 @@
+.comicEditForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.comicEditForm input {
+  background-color: rgba(240, 233, 233, 0.925);
+  height: 40px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  width: 400px;
+}
+
+.comicEditForm textarea {
+  background-color: rgba(240, 233, 233, 0.925);
+  height: 100px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  width: 400px;
+}
+
+.comicEditForm button {
+  transition: none;
+}
