@@ -8,3 +8,18 @@
   color: white;
   z-index: -1;
 }
+
+.home-content {
+  position: absolute;
+  left: 20%;
+  bottom: 25%;
+  width: 50%;
+  text-align: center;
+}
+
+.home button {
+  border: none;
+  width: 100px;
+  transition: none;
+  margin: 10px;
+}

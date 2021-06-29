@@ -2,3 +2,9 @@
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 800px) {
+  .sort {
+    margin: 0;
+  }
+}
