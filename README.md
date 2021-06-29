@@ -106,5 +106,13 @@ https://drive.google.com/file/d/1idx6nMp9Oc9IMh8PL-93PT6qVC4kjNNQ/view?usp=shari
 
 ## Code Showcase
 
+     </div>
+        {props.user && (
+          <Link className="edit-button" to={`/comics/${comic.id}/edit`}>
+            <button className="edit-btn">Edit</button>
+          </Link>
+        )}
+      </div>
+
 - This code makes edit a user priviledge so if theres no
   user then theres no edit button.
