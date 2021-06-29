@@ -39,9 +39,11 @@ const ComicDetail = (props) => {
           </div>
           <Reviews reviews={comic.reviews} />
         </div>
-        <Link className="edit-button" to={`/comics/${comic.id}/edit`}>
-          <button className="edit-btn">Edit</button>
-        </Link>
+        {props.user && (
+          <Link className="edit-button" to={`/comics/${comic.id}/edit`}>
+            <button className="edit-btn">Edit</button>
+          </Link>
+        )}
       </div>
     </Layout>
   );

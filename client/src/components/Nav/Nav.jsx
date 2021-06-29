@@ -38,8 +38,7 @@ const Nav = ({ user }) => {
         <div className="links">
           {user && (
             <p className="link-welcome">
-              <span className="welcome"> Welcome, </span>&nbsp;
-              <span className="username">{user.username} </span>
+              <span className="welcome"> Welcome, {user.username}</span>
             </p>
           )}
           {alwaysOptions}

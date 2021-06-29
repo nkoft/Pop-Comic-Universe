@@ -9,7 +9,7 @@ const Reviews = (props) => {
   }, [props.reviews]);
 
   return (
-    <div>
+    <div className="reviews">
       <h3>Reviews:</h3>
       {reviews &&
         reviews.map((item, index) => <div key={index}>{item.post}</div>)}
