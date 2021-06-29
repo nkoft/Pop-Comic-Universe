@@ -1,11 +1,33 @@
-import "./ComicEdit.css"
-
-
+import { useState, useEffect } from "react";
+import { useParams, Redirect, Link } from "react-router-dom";
+import { putComic, deleteComic } from "../../services/comics";
+import Layout from "./../../components/Layout";
+import "./ComicEdit.css";
 
 const ComicEdit = () => {
+  const [comic, setComic] = useState({
+    image_url: "",
+    title: "",
+    brand: "",
+    artist: "",
+    writer: "",
+    date: "",
+    synopsis: "",
+  });
+
+  // const [isEdited, setEdited] = useState(false);
+  // let { id } = useParams();
+
+  useEffect(() => {
+    const grabComic = async () => {
+      const comic = await getComic(id);
+      setComic(comic);
+    };
+    grabComic();
+  }, [id]);
 
   return (
-       <Layout user={props.user}>
+    <Layout user={props.user}>
       <div className="comic-edit">
         <div className="image-container">
           <img
@@ -96,7 +118,6 @@ const ComicEdit = () => {
         </form>
       </div>
     </Layout>
-  )
-
-
-export default ComicEdit
+  );
+};
+export default ComicEdit;
