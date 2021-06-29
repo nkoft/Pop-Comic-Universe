@@ -3,7 +3,6 @@ import Layout from "../../components/Layout/Layout";
 import Comic from "../../components/Comic/Comic";
 import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
-import ComicCard from "../../components/ComicCard/ComicCard";
 import { AZ, ZA } from "../../utils/sort";
 import { getAllComics } from "../../services/comics";
 import "./Comics.css";
@@ -34,6 +33,8 @@ const Comics = (props) => {
         break;
       case "title-descending":
         setSearchResult(ZA(searchResult));
+        break;
+      default:
         break;
     }
   };

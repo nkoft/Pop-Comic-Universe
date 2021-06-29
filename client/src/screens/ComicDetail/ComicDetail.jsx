@@ -16,7 +16,7 @@ const ComicDetail = (props) => {
       setComic(result);
     };
     fetchComic();
-  }, []);
+  }, [id]);
 
   return (
     <Layout user={props.user}>

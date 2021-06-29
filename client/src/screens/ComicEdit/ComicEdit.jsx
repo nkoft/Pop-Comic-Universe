@@ -19,6 +19,7 @@ const ComicEdit = (props) => {
   let { id } = useParams();
 
   useEffect(() => {
+    console.log(123);
     const grabComic = async () => {
       const comic = await getOneComic(id);
       setComic(comic);

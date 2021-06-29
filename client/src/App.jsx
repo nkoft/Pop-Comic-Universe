@@ -9,12 +9,7 @@ import SignOut from "./screens/SignOut/SignOut";
 import ComicDetail from "./screens/ComicDetail/ComicDetail";
 import ComicEdit from "./screens/ComicEdit/ComicEdit";
 import ComicCreate from "./screens/ComicCreate/ComicCreate";
-import {
-  loginUser,
-  registerUser,
-  verifyUser,
-  removeToken,
-} from "./services/auth";
+import { loginUser, registerUser, verifyUser } from "./services/auth";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -52,11 +47,11 @@ function App() {
         <Route exact path="/comics/:id">
           <ComicDetail user={user} />
         </Route>
-        <Route exact path="/comics/:id/edit">
-          <ComicEdit user={user} />
-        </Route>
         <Route exact path="/comics/create">
           <ComicCreate user={user} />
+        </Route>
+        <Route exact path="/comics/:id/edit">
+          <ComicEdit user={user} />
         </Route>
         <Route exact path="/sign-in">
           <SignIn handleLogin={handleLogin} />

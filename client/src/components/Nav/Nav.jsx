@@ -3,7 +3,7 @@ import "./Nav.css";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/add-comic">
+    <NavLink className="link" to="/comics/create">
       Add New Comic
     </NavLink>
     <NavLink className="link" to="/sign-out">

@@ -1,12 +1,8 @@
 import { useState } from "react";
-import "./SignUp.css";
-import { registerUser } from "../../services/auth";
-import { useHistory, Redirect } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
+import "./SignUp.css";
 
 const SignUp = (props) => {
-  const history = useHistory();
-
   const [form, setForm] = useState({
     username: "",
     email: "",
